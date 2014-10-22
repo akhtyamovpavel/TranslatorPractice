@@ -150,7 +150,10 @@ public:
 			} else {
 				throwRegexException();
 			}
-			
+		}
+		if (!mostLengthPrefix_.empty() || !mostLengthSuffix_.empty() ||
+			!mayFull_.empty() || !maxFullLength_.empty()) {
+			throwIllegalArgumentException();
 		}
 		if (maximalLength >= IntWithInfinity(number)) {
 			return true;

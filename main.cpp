@@ -15,8 +15,11 @@ int main() {
 		std::cin >> letter;
 		int wordLength;
 		std::cin >> wordLength;
-
-		
+		if (runCheck(regularExpression, wordLength, letter)) {
+			std::cout << "YES" << std::endl;
+		} else {
+			std::cout << "NO" << std::endl;
+		}
 		
 	} catch (std::exception& e) {
 		std::cerr << e.what() << std::endl;
